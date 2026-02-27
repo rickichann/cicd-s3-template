@@ -23,5 +23,5 @@ jobs:
       
       - name: Deploy to S3
         run: |
-          aws s3 cp deploy_script.py s3://${{ secrets.S3_BUCKET_NAME }}/deploy_script.py
-          echo "Script deployed successfully to S3!"
+          aws s3 sync . s3://${{ secrets.S3_BUCKET_NAME }}/ --exclude ".git/*" --exclude ".github/*" --exclude "README.md"
+          echo "All files deployed successfully to S3!"
