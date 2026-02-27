@@ -159,6 +159,3 @@ Go to **Actions** tab → **Deploy to S3** → **Run workflow**
 
 ---
 
-## License
-
-MIT
